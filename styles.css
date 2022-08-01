@@ -1,0 +1,16 @@
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+ol {
+  list-style: decimal;
+  padding: 1rem;
+  margin-left: 3rem;
+}
+
+ol li {
+  font-size: 24px;
+  padding: 8px;
+}
