@@ -1,5 +1,6 @@
 body {
   font-family: "Lato", sans-serif;
+  background-color: rgb(45, 45, 45);
 }
 
 main {
@@ -7,6 +8,12 @@ main {
   padding: 100px 50px;
   max-width: 1000px;
   margin: 0 auto;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  -webkit-transition: transform 0.5s linear;
+  -moz-transition: transform 0.5s linear;
+  -ms-transition: transform 0.5s linear;
+  -o-transition: transform 0.5s linear;
 }
 
 .article-title {
@@ -37,4 +44,10 @@ main {
 .article-image {
   max-width: 100%;
   margin-bottom: 14px;
+}
+
+#rotate-button {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
