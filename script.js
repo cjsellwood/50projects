@@ -55,8 +55,8 @@ const names = [
 for (let i = 0; i < names.length; i++) {
   const li = document.createElement("li");
   const a = document.createElement("a");
-  a.textContent = names[i];
-  a.href =  `${i + 1}/index.html`;
+  a.textContent = `${i + 1}. ${names[i]}`;
+  a.href = `${i + 1}/index.html`;
   li.append(a);
   projectList.append(li);
 }
