@@ -1,13 +1,18 @@
 const rotateBtn = document.getElementById("rotate-button");
 const main = document.querySelector("main");
-let menu = false;
+const navMenu = document.querySelector(".nav-menu");
+let menuOpen = false;
 
 rotateBtn.addEventListener("click", () => {
-  if (!menu) {
+  if (!menuOpen) {
     main.style.transform = "rotate(-20deg)";
-    menu = true;
+    navMenu.classList.remove("open");
+    navMenu.style.transform = "translateX(0px)"
+    menuOpen = true;
   } else {
     main.style.transform = "rotate(0deg)";
-    menu = false;
+    navMenu.classList.add("open");
+    navMenu.style.transform = "translateX(-200px)"
+    menuOpen = false;
   }
 });

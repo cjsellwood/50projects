@@ -51,3 +51,48 @@ main {
   top: 0;
   left: 0;
 }
+
+.nav-menu {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  color: white;
+  transition: transform 0.5s ease 0.3s;
+  -webkit-transition: transform 0.5s ease 0.3s;
+  -moz-transition: transform 0.5s ease 0.3s;
+  -ms-transition: transform 0.5s ease 0.3s;
+  -o-transition: transform 0.5s ease 0.3s;
+  transform: translateX(-400px);
+  -webkit-transform: translateX(-400px);
+  -moz-transform: translateX(-400px);
+  -ms-transform: translateX(-400px);
+  -o-transform: translateX(-400px);
+}
+
+.open {
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+
+.nav-menu li {
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu li:nth-child(2) {
+  margin-left: 16px;
+}
+
+.nav-menu li:nth-child(3) {
+  margin-left: 32px;
+}
+
+.nav-menu svg {
+  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+}
