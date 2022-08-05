@@ -16,6 +16,7 @@ main {
   align-items: center;
   gap: 20px;
   padding: 8px;
+  overflow: hidden;
 }
 
 .content {
@@ -34,4 +35,33 @@ main {
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+
+.content:nth-child(2n + 1) {
+  transform: translateX(1500px);
+  -webkit-transform: translateX(1500px);
+  -moz-transform: translateX(1500px);
+  -ms-transform: translateX(1500px);
+  -o-transform: translateX(1500px);
+}
+
+.content:nth-child(2n) {
+  transform: translateX(-1500px);
+  -webkit-transform: translateX(-1500px);
+  -moz-transform: translateX(-1500px);
+  -ms-transform: translateX(-1500px);
+  -o-transform: translateX(-1500px);
+}
+
+.content.center {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
 }
