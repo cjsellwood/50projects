@@ -1,0 +1,23 @@
+{
+  "name": "50projects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts": "tsc --w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjsellwood/50projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjsellwood/50projects/issues"
+  },
+  "homepage": "https://github.com/cjsellwood/50projects#readme",
+  "dependencies": {
+    "typescript": "^4.7.4"
+  }
+}
