@@ -54,9 +54,19 @@ label {
   color: white;
   position: absolute;
   top: 12px;
+  transition: top 0.25s;
+  -webkit-transition: top 0.25s;
+  -moz-transition: top 0.25s;
+  -ms-transition: top 0.25s;
+  -o-transition: top 0.25s;
 }
 
-input:focus {
+label.typing {
+  top: -12px;
+  color: rgb(157, 202, 225)
+}
+
+input.typing {
   border-bottom: 2px solid rgb(157, 202, 225);
 }
 
