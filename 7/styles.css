@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.p-container,
+.x-container {
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 350px;
+}
+
+.p-container {
+  background-image: url("./ps.jpg");
+}
+
+.p-container .overlay {
+  background-color: rgba(13, 0, 255, 0.448);
+}
+
+.x-container {
+  background-image: url("./xbox.jpg");
+}
+
+.x-container .overlay {
+  background-color: rgba(39, 39, 39, 0.792);
+}
+
+.title {
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6vw 0;
+}
+
+.buy-button {
+  background-color: transparent;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  border: 3px solid white;
+  height: 75px;
+  width: 250px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .buy-button {
+    width: 190px;
+    height: 65px;
+  }
+}
+
+.p-container .buy-button:hover {
+  background-color: rgb(56, 79, 209);
+  border-color: rgb(56, 79, 209);
+}
+
+.x-container .buy-button:hover {
+  background-color: green;
+  border-color: green;
+}
