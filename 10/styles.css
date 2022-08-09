@@ -38,6 +38,8 @@ main {
 #joke {
   font-size: 30px;
   padding: 48px;
+  line-height: 1.5;
+  text-align: center;
 }
 
 #joke-button {
