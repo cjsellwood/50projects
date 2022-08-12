@@ -10,6 +10,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .main-container {
@@ -39,11 +40,12 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 12px 8px;
+  width: 100%;
 }
 
 #choices-container > p {
   color: white;
-  background-color: rgb(231, 156, 26);
+  background-color: rgb(231, 139, 26);
   padding: 12px;
   font-size: 14px;
   border-radius: 32px;
@@ -51,4 +53,8 @@ main {
   -moz-border-radius: 32px;
   -ms-border-radius: 32px;
   -o-border-radius: 32px;
+}
+
+#choices-container > p.chosen {
+  background-color: rgb(25, 27, 155);
 }
