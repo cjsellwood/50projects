@@ -33,17 +33,22 @@ main {
   display: flex;
   flex-direction: column;
   margin: 12px;
+  padding: 24px;
   border: 1px solid rgb(167, 167, 167);
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
-  padding: 16px 24px;
   width: 100%;
   max-width: 650px;
   overflow: hidden;
   position: relative;
+  transition: background-color 0.25s;
+  -webkit-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  -ms-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
 }
 
 .question-container.open {
