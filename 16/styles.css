@@ -33,9 +33,7 @@ main > h2 {
   background-color: white;
   border-bottom-left-radius: 32px;
   border-bottom-right-radius: 32px;
-  display: grid;
   overflow: hidden;
-  grid-template-rows: 100% 0%;
 }
 
 #air-amount {
@@ -44,10 +42,15 @@ main > h2 {
   align-items: center;
   justify-content: center;
   color: rgb(45, 45, 200);
-  flex: 8;
   font-weight: 600;
   font-size: 20px;
   overflow: hidden;
+  height: 100%;
+  transition: height 0.25s;
+  -webkit-transition: height 0.25s;
+  -moz-transition: height 0.25s;
+  -ms-transition: height 0.25s;
+  -o-transition: height 0.25s;
 }
 
 #air-amount p {
@@ -61,11 +64,16 @@ main > h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 0;
   color: rgb(45, 45, 200);
   font-weight: 600;
   font-size: 32px;
   overflow: hidden;
+  height: 0%;
+  transition: height 0.25s;
+  -webkit-transition: height 0.25s;
+  -moz-transition: height 0.25s;
+  -ms-transition: height 0.25s;
+  -o-transition: height 0.25s;
 }
 
 h3 {
@@ -94,4 +102,9 @@ h3 {
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   cursor: pointer;
+}
+
+.glass.full {
+  background-color: rgb(124, 179, 250);
+  color: white
 }
