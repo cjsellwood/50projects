@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  width: 100%;
+  background-color: rgb(69, 67, 121);
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+#search-input {
+  background-color: transparent;
+  color: white;
+  width: 350px;
+  padding: 12px;
+  margin: 16px;
+  font-size: 16px;
+  outline: none;
+  border: 2px solid rgb(31, 35, 69);
+  border-radius: 28px;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  -ms-border-radius: 28px;
+  -o-border-radius: 28px;
+}
+
+#search-input::placeholder {
+  color: rgb(128, 125, 210);
+}
+
+#search-input:focus {
+  background-color: rgb(31, 35, 69);
+}
+
+main {
+  background-color: rgb(31, 35, 69);
+  width: 100%;
+  min-height: calc(100vh - 78px);
+}
+
+#movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px;
+  gap: 32px;
+}
+
+.movie-item {
+  width: 300px;
+  background-color: rgb(57, 56, 100);
+  overflow: hidden;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  position: relative;
+}
+
+.movie-item img {
+  width: 300px;
+  height: 450px;
+}
+
+.bottom-bar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.bottom-bar h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 12px;
+  line-height: 1.5;
+}
+
+.bottom-bar p {
+  margin: 16px;
+  background-color: rgb(31, 35, 69);
+  padding: 8px;
+  font-weight: 500;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  height: 32px;
+  align-self: center;
+}
+
+.green-rating {
+  color: rgb(105, 216, 105);
+}
+
+.orange-rating {
+  color: orange;
+}
+
+.red-rating {
+  color: red;
+}
+
+.overview {
+  background-color: white;
+  padding: 30px;
+  padding-top: 40px;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 300px;
+  transition: bottom 0.4s;
+  -webkit-transition: bottom 0.4s;
+  -moz-transition: bottom 0.4s;
+  -ms-transition: bottom 0.4s;
+  -o-transition: bottom 0.4s;
+}
+
+.overview h2 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.overview p {
+  line-height: 1.5;
+}
+
+.movie-item:hover .overview {
+  bottom: 0px;
+}
