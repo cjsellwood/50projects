@@ -4,6 +4,16 @@
   font-family: "Heebo", sans-serif;
 }
 
+html {
+  --background: white;
+  --foreground: black;
+}
+
+html.dark {
+  --background: rgb(18, 18, 18);
+  --foreground: white;
+}
+
 main {
   width: 100%;
   height: 100vh;
@@ -12,6 +22,25 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 100px;
+  background-color: var(--background);
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  -o-transition: background-color 1s;
+}
+
+#theme-button {
+  border: none;
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 6px 14px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  cursor: pointer;
 }
 
 .clock-container {
@@ -35,7 +64,7 @@ main {
   height: 3px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--foreground);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -45,6 +74,11 @@ main {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform-origin: 0%;
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  -o-transition: background-color 1s;
 }
 
 #minute-hand {
@@ -52,7 +86,7 @@ main {
   height: 3px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--foreground);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -62,6 +96,11 @@ main {
   -ms-transform: rotate(85deg);
   -o-transform: rotate(85deg);
   transform-origin: 0%;
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  -o-transition: background-color 1s;
 }
 
 #second-hand {
@@ -82,7 +121,7 @@ main {
 }
 
 #clock-center {
-  background-color: black;
+  background-color: var(--foreground);
   width: 9px;
   height: 9px;
   border-radius: 100%;
@@ -92,20 +131,31 @@ main {
   -o-border-radius: 100%;
   border: 2px solid rgb(255, 93, 93);
   z-index: 2;
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  -o-transition: background-color 1s;
 }
 
 #time {
   font-size: 60px;
   font-weight: 200;
+  color: var(--foreground);
+  transition: color 1s;
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+  -ms-transition: color 1s;
+  -o-transition: color 1s;
 }
 
 #date {
-  color: rgb(179, 179, 179);
+  color: rgb(134, 134, 134);
   font-size: 14px;
 }
 
 #day {
-  background-color: black;
+  background-color: var(--foreground);
   line-height: 22px;
   text-align: center;
   display: inline-block;
@@ -116,22 +166,14 @@ main {
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  -o-transition: background-color 1s;
 }
 
 .placeholder {
   width: 0;
   height: 20px;
-}
-
-#theme-button {
-  border: none;
-  background-color: black;
-  color: white;
-  padding: 6px 14px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  cursor: pointer;
 }
