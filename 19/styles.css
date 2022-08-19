@@ -60,7 +60,7 @@ main {
 }
 
 #hour-hand {
-  width: 60px;
+  width: 65px;
   height: 3px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -68,11 +68,6 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform-origin: 0%;
   transition: background-color 1s;
   -webkit-transition: background-color 1s;
@@ -90,11 +85,6 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: rotate(85deg);
-  -webkit-transform: rotate(85deg);
-  -moz-transform: rotate(85deg);
-  -ms-transform: rotate(85deg);
-  -o-transform: rotate(85deg);
   transform-origin: 0%;
   transition: background-color 1s;
   -webkit-transition: background-color 1s;
@@ -112,12 +102,12 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: rotate(125deg);
-  -webkit-transform: rotate(125deg);
-  -moz-transform: rotate(125deg);
-  -ms-transform: rotate(125deg);
-  -o-transform: rotate(125deg);
   transform-origin: 0%;
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -ms-transition: transform 1s;
+  -o-transition: transform 1s;
 }
 
 #clock-center {
@@ -151,10 +141,13 @@ main {
 
 #date {
   color: rgb(134, 134, 134);
+  text-transform: uppercase;
   font-size: 14px;
 }
 
 #day {
+  color: rgb(134, 134, 134);
+  font-size: 14px;
   background-color: var(--foreground);
   line-height: 22px;
   text-align: center;
