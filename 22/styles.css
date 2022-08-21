@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main > div {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#canvas {
+  width: 800px;
+  height: 700px;
+  border: 2px solid rgb(64, 119, 182);
+}
+
+.toolbar {
+  width: 100%;
+  background-color: rgb(65, 123, 175);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.change-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  font-size: 32px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  padding: 4px;
+}
+
+#color-input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
