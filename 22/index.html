@@ -6,22 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../reset.css" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <title>Drawing App</title>
   </head>
   <body>
     <main>
       <div>
-        <canvas id="canvas"> </canvas>
+        <canvas id="canvas" width="800px" height="700px"> </canvas>
         <div class="toolbar">
           <div class="change-buttons">
-            <button id="reduce-size">-</button>
+            <button id="decrease-size">-</button>
             <button id="size">10</button>
             <button id="increase-size">+</button>
-            <button>
-              <input type="color" id="color-input" />
-            </button>
+            <input type="color" id="color-input" />
           </div>
-          <button id="clear-canvas">X</button>
+          <button id="clear-button">X</button>
         </div>
       </div>
     </main>
