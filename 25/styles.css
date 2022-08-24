@@ -13,15 +13,22 @@ nav {
   width: 100%;
   background-color: rgb(40, 40, 40);
   color: white;
+  transition: background-color 0.5s, height 0.25s;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav.lowered {
   background-color: white;
+  height: 54px;
+  color: black;
 }
 
 .nav-inner {
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .nav-inner > ul {
@@ -37,7 +44,6 @@ nav.lowered {
 
 .nav-inner li {
   padding: 12px;
-  margin: 12px 0;
   transition: color 0.5s;
   text-align: center;
 }
