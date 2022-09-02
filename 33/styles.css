@@ -49,8 +49,8 @@ main {
   justify-content: flex-end;
 }
 
-#edit-button,
-#delete-button {
+.edit-button,
+.delete-button {
   border: none;
   background-color: transparent;
   padding: 6px;
@@ -62,7 +62,7 @@ main {
   height: calc(100% - 31px);
 }
 
-#note-input {
+.note-input {
   width: 100%;
   height: 100%;
   border: none;
@@ -73,6 +73,7 @@ main {
   line-height: 1.5;
 }
 
-#note-input:disabled {
+.note-input:disabled {
   background-color: white;
+  font-size: 18px;
 }
