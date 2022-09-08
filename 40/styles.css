@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#magic-button {
+  position: absolute;
+  top: 20px;
+  padding: 16px;
+  font-size: 18px;
+  background-color: rgb(255, 210, 0);
+  color: white;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+  border-bottom: 3px solid rgb(255, 240, 0);
+  cursor: pointer;
+}
+
+#magic-button:active {
+  border: none;
+  margin-top: 3px;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 575px;
+  transition: gap 0.5s, width 0.5s;
+}
+
+.square {
+  width: 125px;
+  height: 125px;
+  background-size: 500px 500px;
+  position: relative;
+  transition: transform 0.5s;
+}
+
+.square::before {
+  content: "";
+  background-color: rgb(255, 221, 0);
+  width: 100%;
+  position: absolute;
+  height: 16px;
+  bottom: -16px;
+  left: 8px;
+  transform: skew(45deg);
+}
+
+.square::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(253, 239, 147);
+  width: 16px;
+  height: 100%;
+  right: -16px;
+  top: 8px;
+  transform: skew(0, 45deg);
+}
+
+#grid-container.joined {
+  gap: 0;
+  max-width: 500px;
+}
+
+#grid-container.joined .square {
+  transform: rotate(-360deg);
+}
