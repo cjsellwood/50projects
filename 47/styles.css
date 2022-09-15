@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(251, 249, 246);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > div {
+  background-color: rgb(73, 111, 236);
+  border-radius: 12px;
+  padding: 36px 72px;
+  max-width: 750px;
+  margin: 8px;
+}
+
+#loading-bar {
+  background-color: white;
+  width: 0%;
+  height: 4px;
+  margin: 12px 0;
+  animation: load 10s linear infinite;
+}
+
+@keyframes load {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+#text {
+  color: rgb(246, 246, 246);
+  line-height: 1.6;
+  position: relative;
+  text-align: justify;
+}
+
+#text::before {
+  content: url(./quote.svg);
+  position: absolute;
+  left: -48px;
+  top: -12px;
+  width: 48px;
+  height: 48px;
+  transform: rotate(180deg);
+}
+
+#text::after {
+  content: url(./quote.svg);
+  position: absolute;
+  right: -48px;
+  top: -12px;
+  width: 48px;
+  height: 48px;
+}
+
+@media screen and (max-width: 750px) {
+  main > div {
+    padding: 12px 24px;
+  }
+
+  #text::before {
+    display: none;
+  }
+
+  #text::after {
+    display: none;
+  }
+}
+
+.author-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+}
+
+.author-container img {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+#name {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+#position {
+  color: rgb(246, 246, 246);
+  margin-bottom: 12px;
+}
