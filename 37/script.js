@@ -1,13 +1,4 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 const typeColors = {
     fire: "#FDDFDF",
     grass: "#DEFDE0",
@@ -24,11 +15,11 @@ const typeColors = {
     fighting: "#E6E0D4",
     normal: "#F5F5F5",
 };
-const getPokemon = (number) => __awaiter(void 0, void 0, void 0, function* () {
-    const res = yield fetch(`https://pokeapi.co/api/v2/pokemon/${number}`);
-    const data = yield res.json();
+const getPokemon = async (number) => {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${number}`);
+    const data = await res.json();
     return data;
-});
+};
 const createPokemonCard = (pokemon) => {
     const pokemonCard = document.createElement("div");
     pokemonCard.classList.add("pokemon-card");
@@ -47,12 +38,12 @@ const createPokemonCard = (pokemon) => {
   `;
     return pokemonCard;
 };
-const loadPokemon = () => __awaiter(void 0, void 0, void 0, function* () {
+const loadPokemon = async () => {
     const container = document.querySelector(".pokemon-container");
     for (let i = 1; i <= 150; i++) {
-        const pokemon = yield getPokemon(i);
+        const pokemon = await getPokemon(i);
         const pokemonCard = createPokemonCard(pokemon);
         container.append(pokemonCard);
     }
-});
+};
 loadPokemon();

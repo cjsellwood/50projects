@@ -24,42 +24,47 @@
         <div class="choose-screen">
           <h1>What is your "favorite" insect?</h1>
           <div class="choose-buttons">
-            <div>
+            <button>
               <p>Fly</p>
               <img
                 src="https://pngimg.com/uploads/fly/fly_PNG3946.png"
                 alt="fly"
               />
-            </div>
-            <div>
+            </button>
+            <button>
               <p>Mosquito</p>
               <img
                 src="https://pngimg.com/uploads/mosquito/mosquito_PNG18175.png"
                 alt="mosquito"
               />
-            </div>
-            <div>
+            </button>
+            <button>
               <p>Spider</p>
               <img
                 src="https://pngimg.com/uploads/spider/spider_PNG12.png"
                 alt="spider"
               />
-            </div>
-            <div>
+            </button>
+            <button>
               <p>Roach</p>
               <img
                 src="https://pngimg.com/uploads/roach/roach_PNG12163.png"
                 alt="roach"
               />
-            </div>
+            </button>
           </div>
         </div>
         <div class="game-screen">
           <div class="game-header">
-            <p>Time: 0: 00</p>
-            <p>Score: 0</p>
+            <p>Time: <span id="time-display">00:00</span></p>
+            <p>Score: <span id="score-display">0</span></p>
           </div>
-          <div id="insect-container"></div>
+          <div id="insect-container">
+            <div id="warning">
+              <p>Are you annoyed yet?</p>
+              <p>You are playing an impossible game!!</p>
+            </div>
+          </div>
         </div>
       </div>
     </main>

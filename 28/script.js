@@ -1,24 +1,15 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search-input");
-searchForm.addEventListener("submit", (e) => __awaiter(void 0, void 0, void 0, function* () {
+searchForm.addEventListener("submit", async (e) => {
     var _a, _b;
     e.preventDefault();
     const query = searchInput.value;
     searchInput.value = "";
     hideError();
     try {
-        const user = yield fetchUser(query);
-        const repos = yield fetchRepos(user.repos_url);
+        const user = await fetchUser(query);
+        const repos = await fetchRepos(user.repos_url);
         displayUser({
             avatar_url: user.avatar_url,
             name: (_a = user.name) !== null && _a !== void 0 ? _a : "null",
@@ -34,17 +25,17 @@ searchForm.addEventListener("submit", (e) => __awaiter(void 0, void 0, void 0, f
     catch (error) {
         showError("No profile with this username");
     }
-}));
-const fetchUser = (query) => __awaiter(void 0, void 0, void 0, function* () {
-    const res = yield fetch(`https://api.github.com/users/${query}`);
-    const data = yield res.json();
-    return data;
 });
-const fetchRepos = (url) => __awaiter(void 0, void 0, void 0, function* () {
-    const res = yield fetch(url + "?sort=created");
-    const data = yield res.json();
+const fetchUser = async (query) => {
+    const res = await fetch(`https://api.github.com/users/${query}`);
+    const data = await res.json();
     return data;
-});
+};
+const fetchRepos = async (url) => {
+    const res = await fetch(url + "?sort=created");
+    const data = await res.json();
+    return data;
+};
 const displayUser = (user) => {
     const { avatar_url, name, bio, followers, following, public_repos, repos } = user;
     const userContainer = document.getElementById("user-container");

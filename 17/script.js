@@ -1,23 +1,14 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 const movieContainer = document.getElementById("movie-container");
-const addPopularMovies = () => __awaiter(void 0, void 0, void 0, function* () {
-    const movieResponse = yield fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1");
-    const movieData = yield movieResponse.json();
+const addPopularMovies = async () => {
+    const movieResponse = await fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1");
+    const movieData = await movieResponse.json();
     const fetchedMovies = movieData.results;
     fetchedMovies.forEach((movie) => {
         const movieItem = createMovieItem(movie);
         movieContainer.append(movieItem);
     });
-});
+};
 window.addEventListener("load", addPopularMovies);
 const createMovieItem = (movie) => {
     const movieItem = document.createElement("div");
@@ -58,13 +49,13 @@ searchForm.addEventListener("submit", (e) => {
         searchBar.value = "";
     }
 });
-const addSearchedMovies = (query) => __awaiter(void 0, void 0, void 0, function* () {
-    const movieResponse = yield fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1&language=en-US`);
-    const movieData = yield movieResponse.json();
+const addSearchedMovies = async (query) => {
+    const movieResponse = await fetch(`https://api.themoviedb.org/3/search/movie?query=${query}&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1&language=en-US`);
+    const movieData = await movieResponse.json();
     const fetchedMovies = movieData.results;
     movieContainer.replaceChildren();
     fetchedMovies.forEach((movie) => {
         const movieItem = createMovieItem(movie);
         movieContainer.append(movieItem);
     });
-});
+};
