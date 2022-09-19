@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Catch The Insect</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="start-screen">
+          <h1>Catch The Insect</h1>
+          <button id="play-button">Play Game</button>
+        </div>
+        <div class="choose-screen">
+          <h1>What is your "favorite" insect?</h1>
+          <div class="choose-buttons">
+            <div>
+              <p>Fly</p>
+              <img
+                src="https://pngimg.com/uploads/fly/fly_PNG3946.png"
+                alt="fly"
+              />
+            </div>
+            <div>
+              <p>Mosquito</p>
+              <img
+                src="https://pngimg.com/uploads/mosquito/mosquito_PNG18175.png"
+                alt="mosquito"
+              />
+            </div>
+            <div>
+              <p>Spider</p>
+              <img
+                src="https://pngimg.com/uploads/spider/spider_PNG12.png"
+                alt="spider"
+              />
+            </div>
+            <div>
+              <p>Roach</p>
+              <img
+                src="https://pngimg.com/uploads/roach/roach_PNG12163.png"
+                alt="roach"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="game-screen">
+          <div class="game-header">
+            <p>Time: 0: 00</p>
+            <p>Score: 0</p>
+          </div>
+          <div id="insect-container"></div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
